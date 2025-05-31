@@ -1,0 +1,32 @@
+Now We Use 
+
+
+//setup static folder
+app.use(express.static(path.join(__dirname, "public")));
+
+
+this in 3_server.js so now any type `http://localhost:5000/public.txt` so he/she can access my all file which in public 
+
+example:
+http://localhost:5000/public.txt
+
+
+
+
+In ES Module you not access directly "__dirname"
+so for use this you need 3 step for access dirname
+
+# step - 1
+
+import {fileURLToPath} from 'url';
+import path from "path";
+
+# step - 2
+
+const __filename = fileURLToPath(imoport.meta.url);
+
+# step - 3
+const __dirname = path.dirname(__filename);
+
+//setup static folder
+app.use(express.static(path.join(__dirname, "public")))

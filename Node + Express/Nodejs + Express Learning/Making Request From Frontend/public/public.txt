@@ -1,0 +1,11 @@
+Now We Use 
+
+
+//setup static folder
+app.use(express.static(path.join(__dirname, "public")));
+
+
+this in 3_server.js so now any type `http://localhost:5000/public.txt` so he/she can access my all file which in public 
+
+example:
+http://localhost:5000/public.txt
